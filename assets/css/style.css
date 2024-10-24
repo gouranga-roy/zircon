@@ -79,10 +79,10 @@ button {
   border-color: var(--color-border) !important; }
 
 .zcPrimary-bg {
-  background-color: var(--primary-color) !important; }
+  background: var(--primary-color) !important; }
 
 .white-bg {
-  background-color: var(--white-color) !important; }
+  background: var(--white-color) !important; }
 
 .zc_section_heading {
   position: relative;
@@ -296,6 +296,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .mb-54 {
   margin-bottom: 54px; }
+
+.mt-120 {
+  margin-top: 120px; }
+
+.mb-120 {
+  margin-bottom: 120px; }
 
 /******************************* theme css **********************************/
 /******************************** components ******************************/
@@ -528,6 +534,60 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       fill: var(--white-color);
       font-family: var(--primary-font);
       font-weight: 400; }
+
+/** Look Book **/
+.zc_look_book .zc_look_single {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 40px;
+  background-position: center right;
+  position: relative;
+  overflow: hidden; }
+  .zc_look_book .zc_look_single h3 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 57.6px;
+    color: #000;
+    max-width: 280px;
+    width: 100%;
+    margin: 0 0 20px; }
+  .zc_look_book .zc_look_single p {
+    line-height: 25.2px;
+    font-weight: 500;
+    margin: 0 0 32px; }
+  .zc_look_book .zc_look_single .blob-btn {
+    padding: 13.5px 22.4px 13.5px; }
+    .zc_look_book .zc_look_single .blob-btn:hover {
+      color: var(--white-color) !important; }
+    .zc_look_book .zc_look_single .blob-btn .blob-btn__inner {
+      background: var(--white-color); }
+  .zc_look_book .zc_look_single .shop-btn .blob-btn__inner {
+    background: var(--heading-color); }
+    .zc_look_book .zc_look_single .shop-btn .blob-btn__inner .blob-btn__blob {
+      background: var(--primary-color); }
+  .zc_look_book .zc_look_single .discount_badge {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.8px;
+    position: absolute;
+    right: 54px;
+    bottom: -19px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white-color);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
 
 /** Newsletter **/
 .zc_newsletter .newsletter_bg {

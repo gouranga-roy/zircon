@@ -64,6 +64,66 @@
     }
 }
 
+/** Look Book **/
+.zc_look_book {
+    .zc_look_single {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: 40px;
+        background-position: center right;
+        position: relative;
+        overflow: hidden;
+        h3 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 57.6px;
+            color: #000;
+            max-width: 280px;
+            width: 100%;
+            margin: 0 0 20px;
+        }
+        p{
+            line-height: 25.2px;
+            font-weight: 500;
+            margin: 0 0 32px;
+        }
+        .blob-btn {
+            padding: 13.5px 22.4px 13.5px;
+            &:hover {
+                color: var(--white-color) !important;
+            }
+            .blob-btn__inner {
+                background: var(--white-color);
+            }
+        }
+        .shop-btn {
+            .blob-btn__inner {
+                background: var(--heading-color);
+                .blob-btn__blob {
+                    background: var(--primary-color);
+                }
+            }
+        }
+        .discount_badge {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 19.8px;
+            position: absolute;
+            right: 54px;
+            bottom: -19px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: var(--white-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
 
 /** Newsletter **/
 .zc_newsletter {

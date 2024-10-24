@@ -56,11 +56,12 @@ button {
 
 // Background color Class 
 .zcPrimary-bg {
-    background-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
 }
 .white-bg {
-    background-color: var(--white-color) !important;
+    background: var(--white-color) !important;
 }
+
 // .gmSecondary-bg{
 //     background-color: var(--secondary-color) !important;
 // }
