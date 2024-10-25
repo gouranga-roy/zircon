@@ -42,5 +42,21 @@ $(document).ready(function(){
         },
     });
 
+    // Hover Toggle Class
+    document.querySelectorAll('.collection_single').forEach(function (element) {
+        element.addEventListener('mouseenter', function () {
+            element.classList.add('active');
+            element.parentNode.querySelectorAll('.collection_single').forEach(function (sibling) {
+                if (sibling !== element) {
+                    sibling.classList.remove('active');
+                }
+            });
+        });
+    
+        element.addEventListener('mouseleave', function () {
+            element.classList.remove('active');
+            document.querySelector('.active_item').classList.add('active');
+        });
+    });
 
 });
