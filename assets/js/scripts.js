@@ -29,9 +29,29 @@ function openCity(evt, cityName) {
 }
 
 
-$(document).ready(function(){
+$(document).ready(function () {
+    
+    // Product Quentity
+    if ($(".quantity").length > 0) {
+            $(".ptPlus").on('click', function () {
+            var vals = parseInt($(this).prev(".carqty").val(), 10);
+            vals += 1;
+            $(this).prev(".carqty").val(vals).trigger('change');
+            return false;
+            });
+            $(".ptMinus").on('click', function () {
+            var vals = parseInt($(this).next(".carqty").val(), 10);
+            if (vals > 1) {
+                vals -= 1;
+                $(this).next(".carqty").val(vals).trigger('change');
+            } else {
+                $(this).next(".carqty").val(vals).trigger('change');
+            }
+            return false;
+            });
+        }
 
-    //   Feedback Slider
+    //  Feedback Slider
     var swiper = new Swiper(".zc_feedback_slider", {
         slidesPerView: 2,
         spaceBetween:30,
@@ -40,6 +60,41 @@ $(document).ready(function(){
             nextEl: ".feedback-button-next",
             prevEl: ".feedback-button-prev",
         },
+    });
+
+    // Product Cart Slider
+    const sliderThumbs = new Swiper('.slider_thumbs .swiper-container', { 
+        direction: 'vertical',
+        slidesPerView: 4,
+        spaceBetween: 16,
+        freeMode: true,
+        breakpoints: { 
+            0: { 
+                direction: 'horizontal',
+            },
+            768: {
+                direction: 'vertical',
+            }
+        }
+    });
+   
+    const sliderImages = new Swiper('.slider_images .swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 32,
+        mousewheel: true,
+        grabCursor: true, 
+        thumbs: { 
+            swiper: sliderThumbs
+        },
+        breakpoints: {
+            0: {
+                direction: 'horizontal',
+            },
+            768: {
+                direction: 'vertical', 
+            }
+        }
     });
 
     // Hover Toggle Class
